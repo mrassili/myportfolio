@@ -28,7 +28,7 @@ class Contact extends React.Component {
               <input
                 type="text"
                 name="name"
-                className="py-2 px-3 text-bold-gray rounded-lg bg-black-light border-lime border w-full h-10"
+                className="shadow-xl py-2 px-3 text-bold-gray rounded-lg bg-black-light border-lime border w-full h-10"
                 placeholder="Name"
               />
             </div>
@@ -36,7 +36,7 @@ class Contact extends React.Component {
               <input
                 type="text"
                 name="email"
-                className="py-2 px-3 text-bold-gray rounded-lg bg-black-light border-lime border w-full h-10"
+                className="shadow-xl py-2 px-3 text-bold-gray rounded-lg bg-black-light border-lime border w-full h-10"
                 placeholder="E-mail"
               />
             </div>
@@ -44,14 +44,14 @@ class Contact extends React.Component {
               <input
                 type="text"
                 name="company"
-                className="py-2 px-3 rounded-lg text-bold-gray bg-black-light border-lime border w-full h-10"
+                className="shadow-xl py-2 px-3 rounded-lg text-bold-gray bg-black-light border-lime border w-full h-10"
                 placeholder="Company name"
               />
             </div>
             <div className=" mb-3">
               <label className="text-lime">
                 The service you need:
-                <select className="py-2 text-bold-gray px-3 mt-1 rounded-lg bg-black-light border-lime border w-full h-10">
+                <select className="shadow-xl py-2 text-bold-gray px-3 mt-1 rounded-lg bg-black-light border-lime border w-full h-10">
                   <option value="website dev">Develop a Website</option>
                 </select>
               </label>
@@ -62,7 +62,7 @@ class Contact extends React.Component {
                 <input
                   name="due_date"
                   type="date"
-                  className=" text-bold-gray py-2 px-3 mt-1 block rounded-lg bg-black-light border-lime border w-full h-10"
+                  className="shadow-xl text-bold-gray py-2 px-3 mt-1 block rounded-lg bg-black-light border-lime border w-full h-10"
                 />
               </label>
             </div>
@@ -89,17 +89,17 @@ class Contact extends React.Component {
               </label>
            
             </div>
-            <div className="flex-1 mb-3">
+            <div className=" mb-3">
               <textarea
                 name="project_details"
-                className="text-sm h-full text-bold-gray py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-full"
+                className="shadow-xl text-sm h-full text-bold-gray py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-full"
                 placeholder="Tell me more about the project"
               />
             </div>
             <div className="text-center">
               <button
                 type="submit"
-                className=" px-1 rounded-lg text-navy border-2 border-lime w-16 uppercase bg-lime "
+                className="shadow-xl px-1 rounded-lg text-navy border-2 border-lime w-16 uppercase bg-lime "
               >
                 Send
               </button>
