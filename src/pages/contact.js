@@ -92,7 +92,7 @@ class Contact extends React.Component {
             <div className="flex-1 mb-3">
               <textarea
                 name="project_details"
-                className="text-sm h-full text-bold-gray py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-10"
+                className="text-sm h-full text-bold-gray py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-full"
                 placeholder="Tell me more about the project"
               />
             </div>
