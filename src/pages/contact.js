@@ -1,39 +1,60 @@
 import React from "react"
 import Layout from "../components/layout"
 import classNames from "classnames"
-import '../styles/contact.module.css'
+import "../styles/contact.module.css"
 
 const Contact = () => (
   <Layout>
     <section className="text-base font-normal font-lato bg-navy absolute top-2rem bottom-2rem left-2rem right-2rem z-10  shadow-multi2xl">
-      <form className="flex flex-col h-full">
-        <div className="px-5 mb-3">
-          <input className="py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-10" placeholder="Name" />
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        className="py-12 px-5 flex flex-col h-full"
+      >
+        <div className=" mb-3">
+          <input
+            type="text"
+            name="name"
+            className="py-2 px-3 text-bold-gray rounded-lg bg-black-light border-lime border w-full h-10"
+            placeholder="Name"
+          />
         </div>
-        <div className="px-5 mb-3">
-          <input className="py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-10" placeholder="E-mail" />
+        <div className=" mb-3">
+          <input
+            type="text"
+            name="email"
+            className="py-2 px-3 text-bold-gray rounded-lg bg-black-light border-lime border w-full h-10"
+            placeholder="E-mail"
+          />
         </div>
-        <div className="px-5 mb-3">
-          <input className="py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-10" placeholder="Company name" />
+        <div className=" mb-3">
+          <input
+            type="text"
+            name="company"
+            className="py-2 px-3 rounded-lg text-bold-gray bg-black-light border-lime border w-full h-10"
+            placeholder="Company name"
+          />
         </div>
-        <div className="px-5 mb-3">
+        <div className=" mb-3">
           <label className="text-lime">
             The service you need:
-            <select className="py-2 px-3 mt-1 text-light-gray rounded-lg bg-black-light border-lime border w-full h-10">
-              <option>Develop a Website</option>
+            <select className="py-2 text-bold-gray px-3 mt-1 rounded-lg bg-black-light border-lime border w-full h-10">
+              <option value="website dev">Develop a Website</option>
             </select>
           </label>
         </div>
-        <div className="px-5 mb-3">
+        <div className=" mb-3">
           <label className="text-lime">
             Due date:
             <input
+              name="due_date"
               type="date"
-              className="py-2 px-3 mt-1 text-light-gray rounded-lg bg-black-light border-lime border w-full h-10"
+              className=" text-bold-gray py-2 px-3 mt-1 text-light-gray rounded-lg bg-black-light border-lime border w-full h-10"
             />
           </label>
         </div>
-        <div className="px-5 mb-3">
+        <div className=" mb-3">
           <label className="text-lime">
             Budget:
             <input
@@ -45,10 +66,21 @@ const Contact = () => (
             />
           </label>
         </div>
-        <div className="px-5">
-  
-          <textarea className="py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-10" placeholder="Tell me more about the project" />
-  </div>
+        <div className="flex-1 mb-3">
+          <textarea
+            name="project_details"
+            className="text-sm h-full text-bold-gray py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-10"
+            placeholder="Tell me more about the project"
+          />
+        </div>
+        <div className="text-center">
+          <button
+            type="submit"
+            className=" px-1 rounded-lg text-navy border-2 border-lime w-16 uppercase bg-lime "
+          >
+            Send
+          </button>
+        </div>
       </form>
     </section>
   </Layout>
