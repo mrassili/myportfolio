@@ -69,6 +69,11 @@ module.exports = {
       addUtilities({
         ".outline-modal": { outline: "9999px solid rgba(0,0,0,0.59)" },
       })
+    },function({ addUtilities }) {
+      addUtilities({
+        ".writing-v": { 'writing-mode': 'vertical-rl' },
+      })
     },
+
   ],
 }
