@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+
+.vbar::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: theme("width.pt375rem");
+  background-color: theme("colors.lime");
+}
+
+.dark-overlay::after {
+  content: "";
+  @apply outline-modal;
+}

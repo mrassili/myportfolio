@@ -1,0 +1,181 @@
+/**
+ * Range Slider Specific
+ */
+/**
+ * General Input styling
+ *
+ * As all ranges in a UI should probably look the same, there
+ * is no need to use a class here, and the specific type of
+ * input, [range], can instead be the selector to specifically
+ * target the form control.
+ */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: inherit;
+  width: 100%;
+  background-color: transparent;
+}
+
+input[type="range"][disabled] {
+  opacity: 0.625;
+}
+
+/**
+ * Track
+ */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: theme("colors.bold-gray");
+  height: 0.5px;
+  width: 100%;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 0.35em;
+  background-color: theme("colors.bold-gray");
+  width: 100%;
+}
+
+input[type="range"]::-moz-range-progress {
+  height: 0.4em;
+}
+
+input[type="range"]::-ms-track {
+  height: 0.4em;
+  width: 100%;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  input[type="range"]::-ms-track {
+    border: 0;
+    margin: 1em 0;
+  }
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: theme("colors.bold-gray");
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: theme("colors.bold-gray");
+  border: 1px solid theme("colors.bold-gray");
+  border-radius: 4px;
+}
+
+/**
+ * Focus Styles
+ */
+input[type="range"]:focus {
+  outline: 0;
+  background-color: transparent;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: theme("colors.bold-gray");
+}
+
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+
+input[type="range"]:focus::-moz-range-track {
+  background: theme("colors.bold-gray");
+}
+
+.styled ::-ms-ticks-after,
+.styled ::-ms-ticks-before {
+  display: block;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: theme("colors.bold-gray");
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: theme("colors.bold-gray");
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  background: theme("colors.bold-gray");
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  background: theme("colors.bold-gray");
+}
+
+input[type="range"]:focus::-ms-thumb {
+  background: theme("colors.bold-gray");
+}
+
+/**
+ * Thumbs
+ */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: theme("colors.bold-gray");
+  border-radius: 50%;
+  height: 17px;
+  width: 17px;
+  cursor: grab;
+  margin: -8.5px 0 0;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+input[type="range"][disabled]::-webkit-slider-thumb {
+  cursor: not-allowed;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: theme("colors.bold-gray");
+  border: 1px solid theme("colors.bold-gray");
+  border-radius: 2px;
+  cursor: grab;
+  height: 1.825em;
+  position: relative;
+  width: 1.125em;
+  z-index: 3;
+}
+
+input[type="range"][disabled]::-moz-range-thumb {
+  cursor: not-allowed;
+}
+
+/**
+ * Edge respects the webkit styling here (odd), but
+ * IE11 doesn't (correct). To get both browsers
+ * to be correctly styled, this is still necessary
+ * and the negative margin of the webkit styling
+ * needs to be removed.
+ */
+input[type="range"]::-ms-thumb {
+  background: theme("colors.bold-gray");
+  cursor: grab; /* ms doesn't currently support */
+  height: 1.825em;
+  margin: 0;
+  position: relative;
+  width: 1.125em;
+  z-index: 3;
+}
+
+input[type="range"][disabled]::-ms-thumb {
+  cursor: not-allowed;
+}
+
+/**
+ * When a user specifically 'grabs' the
+ * thumb/knob/whatever, change the cursor
+ * to the active state.
+ */
+input[type="range"]:not([disabled])::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+input[type="range"]:not([disabled])::-moz-range-thumb:active {
+  cursor: grabbing;
+}
+input[type="range"]:not([disabled])::-ms-thumb:active {
+  cursor: grabbing; /* ms doesn't currently support */
+}
+
