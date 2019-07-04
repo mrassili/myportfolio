@@ -48,7 +48,7 @@ input[type="range"]::-ms-track {
 @media screen and (-ms-high-contrast: active) {
   input[type="range"]::-ms-track {
     border: 0;
-    margin: 1em 0;
+    /* margin: 1em 0; */
   }
 }
 
@@ -130,10 +130,7 @@ input[type="range"][disabled]::-webkit-slider-thumb {
 
 input[type="range"]::-moz-range-thumb {
   background: theme("colors.bold-gray");
-  border: 1px solid theme("colors.bold-gray");
-  border-radius: 2px;
   cursor: grab;
-  height: 1.825em;
   position: relative;
   width: 1.125em;
   z-index: 3;
@@ -153,7 +150,6 @@ input[type="range"][disabled]::-moz-range-thumb {
 input[type="range"]::-ms-thumb {
   background: theme("colors.bold-gray");
   cursor: grab; /* ms doesn't currently support */
-  height: 1.825em;
   margin: 0;
   position: relative;
   width: 1.125em;

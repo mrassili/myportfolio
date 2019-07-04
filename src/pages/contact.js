@@ -62,7 +62,7 @@ class Contact extends React.Component {
                 <input
                   name="due_date"
                   type="date"
-                  className=" text-bold-gray py-2 px-3 mt-1 text-light-gray rounded-lg bg-black-light border-lime border w-full h-10"
+                  className=" text-bold-gray py-2 px-3 mt-1 inline-block rounded-lg bg-black-light border-lime border w-full h-10"
                 />
               </label>
             </div>
