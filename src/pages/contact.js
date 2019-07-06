@@ -19,7 +19,7 @@ class Contact extends React.Component {
     let twoMosFromToday = new Date(today.setMonth(today.getMonth() + 2))
     return (
       <Layout>
-        <section className="text-base font-normal font-lato bg-navy absolute top-2rem bottom-2rem left-2rem right-2rem z-10  shadow-multi2xl">
+        <section className="h-full text-base font-normal font-lato bg-navy absolute top-2rem bottom-2rem left-2rem right-2rem z-10  shadow-multi2xl">
           <form
             name="contact"
             method="POST"
@@ -94,7 +94,7 @@ class Contact extends React.Component {
             <div className=" mb-3">
               <textarea
                 name="project_details"
-                className="shadow-xl text-sm h-full text-bold-gray py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-full"
+                className="resize-none shadow-xl text-sm h-full text-bold-gray py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-full"
                 placeholder="Tell me more about the project"
               />
             </div>
