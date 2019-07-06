@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import classNames from "classnames"
-import "../styles/contact.module.css"
+import styles from "../styles/contact.module.css"
 
 class Contact extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class Contact extends React.Component {
             name="contact"
             method="POST"
             data-netlify="true"
-            className="py-12 px-5 flex flex-col h-full"
+            className="my-12 mx-5 flex flex-col h-full"
           >
             <div className=" mb-3">
               <input
@@ -51,7 +51,7 @@ class Contact extends React.Component {
             <div className=" mb-3">
               <label className="text-lime">
                 The service you need:
-                <select className="shadow-xl py-2 text-bold-gray px-3 mt-1 rounded-lg bg-black-light border-lime border w-full h-10">
+                <select className={classNames(styles.selectCss)}>
                   <option value="website dev">Develop a Website</option>
                 </select>
               </label>
