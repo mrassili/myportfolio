@@ -62,7 +62,7 @@ class Contact extends React.Component {
                 <input
                   name="due_date"
                   type="date"
-                  className="shadow-xl text-bold-gray py-2 px-3 mt-1 block rounded-lg bg-black-light border-lime border w-full h-10"
+                  className={classNames(styles.date)}
                 />
               </label>
             </div>
@@ -78,7 +78,6 @@ class Contact extends React.Component {
                   step="100"
                   className={classNames("mt-1 w-full h-10")}
                 />
-      
                 <span className="absolute top-0  right-0 text-bold-gray">
                   {new Intl.NumberFormat("en-US", {
                     style: "currency",
@@ -87,7 +86,6 @@ class Contact extends React.Component {
                   }).format(budget) || "Unknown"}
                 </span>
               </label>
-           
             </div>
             <div className=" mb-3">
               <textarea
