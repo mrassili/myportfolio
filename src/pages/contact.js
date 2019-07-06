@@ -51,7 +51,7 @@ class Contact extends React.Component {
             <div className=" mb-3">
               <label className="text-lime">
                 The service you need:
-                <select className={classNames(styles.selectCss)}>
+                <select className={classNames(styles.select)}>
                   <option value="website dev">Develop a Website</option>
                 </select>
               </label>
