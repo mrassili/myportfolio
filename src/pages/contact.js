@@ -19,14 +19,14 @@ class Contact extends React.Component {
     let twoMosFromToday = new Date(today.setMonth(today.getMonth() + 2))
     return (
       <Layout>
-        <section className="h-full text-base font-normal font-lato bg-navy absolute top-2rem bottom-2rem left-2rem right-2rem z-10  shadow-multi2xl">
+        <section className=" flex flex-col justify-center overflow-y-scroll text-base font-normal font-lato bg-navy absolute top-2rem bottom-2rem left-2rem right-2rem z-10  shadow-multi2xl">
           <form
             name="contact"
             method="POST"
             data-netlify="true"
-            className="my-12 mx-5 flex flex-col h-full"
+            className="my-10 mx-5 flex flex-col "
           >
-            <div className=" mb-3">
+            <div className="mt-3 mb-3">
               <input
                 type="text"
                 name="name"
