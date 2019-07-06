@@ -7,7 +7,7 @@ class Contact extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      budget: null,
+      budget: 1000,
     }
   }
 
@@ -79,6 +79,7 @@ class Contact extends React.Component {
                   min="100"
                   max="10000"
                   step="100"
+                  value={this.state.budget}
                   className={classNames("mt-1 w-full h-10")}
                 />
                 <span className="absolute top-0  right-0 text-bold-gray">
