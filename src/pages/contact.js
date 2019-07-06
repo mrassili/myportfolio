@@ -15,6 +15,8 @@ class Contact extends React.Component {
 
   render() {
     const { budget } = this.state
+    let today = new Date()
+    let twoMosFromToday = new Date(today.setMonth(today.getMonth() + 2))
     return (
       <Layout>
         <section className="text-base font-normal font-lato bg-navy absolute top-2rem bottom-2rem left-2rem right-2rem z-10  shadow-multi2xl">
@@ -63,6 +65,7 @@ class Contact extends React.Component {
                   name="due_date"
                   type="date"
                   className={classNames(styles.date)}
+                  value={twoMosFromToday.toISOString().substr(0, 10)}
                 />
               </label>
             </div>
