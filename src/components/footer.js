@@ -3,7 +3,7 @@ import React from "react"
 const Footer = () => (
   <footer>
     <svg
-      className="fill-current text-lime absolute right-0 bottom-0"
+      className="fixed fill-current text-lime right-0 bottom-0"
       width="277"
       height="123"
       viewBox="0 0 277 123"

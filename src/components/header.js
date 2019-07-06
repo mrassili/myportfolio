@@ -5,7 +5,7 @@ import React from "react"
 const Header = () => (
   <header>
     <svg
-      className="fill-current text-lime"
+      className="fill-current text-lime fixed"
       width="265"
       height="189"
       xmlns="http://www.w3.org/2000/svg"

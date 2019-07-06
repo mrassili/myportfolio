@@ -6,27 +6,30 @@ import styles from "../styles/contact.module.css"
 class Contact extends React.Component {
   constructor(props) {
     super(props)
+    const today = new Date()
+    const twoMosFromToday = new Date(today.setMonth(today.getMonth() + 2)).toISOString().substr(0, 10)
+
     this.state = {
       budget: 1000,
+      dueDate: twoMosFromToday,
     }
   }
 
   handleBudgetChange = e => this.setState({ budget: e.target.value })
+  handleDateChange = e => this.setState({ dueDate: e.target.value })
 
   render() {
     const { budget } = this.state
-    let today = new Date()
-    let twoMosFromToday = new Date(today.setMonth(today.getMonth() + 2))
     return (
       <Layout>
-        <section className=" flex flex-col justify-center overflow-y-scroll text-base font-normal font-lato bg-navy absolute top-2rem bottom-2rem left-2rem right-2rem z-10  shadow-multi2xl">
+        <section className=" flex flex-col justify-center text-base font-normal font-lato bg-navy absolute top-2rem bottom-2rem left-2rem right-2rem z-10  shadow-multi2xl h-full">
           <form
             name="contact"
             method="POST"
             data-netlify="true"
             className="my-10 mx-5 flex flex-col "
           >
-            <div className="mt-3 mb-3">
+            <div className="mb-3">
               <input
                 type="text"
                 name="name"
@@ -62,10 +65,11 @@ class Contact extends React.Component {
               <label className="text-lime">
                 Due date:
                 <input
+                  onChange={this.handleDateChange}
                   name="due_date"
                   type="date"
                   className={classNames(styles.date)}
-                  value={twoMosFromToday.toISOString().substr(0, 10)}
+                  value={this.state.dueDate}
                 />
               </label>
             </div>

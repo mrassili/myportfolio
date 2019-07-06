@@ -40,13 +40,14 @@ module.exports = {
         navier: "#0e0b2d",
         "black-light": "rgba(0,0,0,.11)",
         "light-gray": "#c4c4c4b0",
-        "bold-gray": "#c4c4c4"
+        "bold-gray": "#c4c4c4",
       },
       height: {
         "90-screen": "90vh",
         "95-screen": "95vh",
         "half-full": "50%",
         "14": "3.5rem",
+        "120-screen": "120vh",
       },
       width: {
         "70-screen": "70vw",
@@ -69,11 +70,11 @@ module.exports = {
       addUtilities({
         ".outline-modal": { outline: "9999px solid rgba(0,0,0,0.59)" },
       })
-    },function({ addUtilities }) {
+    },
+    function({ addUtilities }) {
       addUtilities({
-        ".writing-v": { 'writing-mode': 'vertical-rl' },
+        ".writing-v": { "writing-mode": "vertical-rl" },
       })
     },
-
   ],
 }
