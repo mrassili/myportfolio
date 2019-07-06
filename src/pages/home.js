@@ -118,6 +118,7 @@ class Home extends React.Component {
                 React.js and Open-source. Currently living in El Jadida,
                 Morocco.
               </p>
+      <a href="#" className="inline-block text-2xl px-2 my-5 uppercase rounded-lg bg-lime">Get in touch</a>
             </div>
           </main>
 

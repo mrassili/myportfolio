@@ -6,7 +6,7 @@ import '../styles/tailwind.css'
 const Layout = ({children}) => (
   <div className="flex flex-col h-120-screen bg-navy">
     <Header />
-    <main className="flex-1 flex flex-col justify-center">{children}</main>
+    <main className="h-full relative flex flex-col justify-center">{children}</main>
     <Footer />
   </div>
 )

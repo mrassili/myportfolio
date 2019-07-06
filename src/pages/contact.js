@@ -22,13 +22,14 @@ class Contact extends React.Component {
     const { budget } = this.state
     return (
       <Layout>
-        <section className=" flex flex-col justify-center text-base font-normal font-lato bg-navy absolute top-2rem bottom-2rem left-2rem right-2rem z-10  shadow-multi2xl h-full">
+        <section className="justify-center flex flex-col text-base font-normal font-lato bg-navy absolute top-2rem bottom-2rem left-2rem right-2rem z-10  shadow-multi2xl h-auto">
           <form
             name="contact"
             method="POST"
             data-netlify="true"
-            className="my-10 mx-5 flex flex-col "
-          >
+            className="mx-5 flex flex-col "
+          ><div className="mb-3 text-center">
+             <h1 className={classNames("text-lime font-extrabold tracking-wider uppercase")}>Get in touch</h1></div> 
             <div className="mb-3">
               <input
                 type="text"
@@ -97,8 +98,9 @@ class Contact extends React.Component {
             </div>
             <div className=" mb-3">
               <textarea
-                name="project_details"
-                className="resize-none shadow-xl text-sm h-full text-bold-gray py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-full"
+        rows="5"        
+        name="project_details"
+                className="resize-none shadow-xl text-sm text-bold-gray py-2 px-3 rounded-lg bg-black-light border-lime border w-full h-full"
                 placeholder="Tell me more about the project"
               />
             </div>
